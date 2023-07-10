@@ -20,96 +20,93 @@ gitではブランチという機能が用意されており、これにより�
 
 ## gitのコマンド
 ### 初期設定
-・git config --global user.name "<USER_NAME>"
+・git config --global user.name "<USER_NAME>"\
   コミットした際に表示される名前を設定する。
   "<USER_NAME>"は設定したい名前に置き換える。
 
-・git config --global user.email "<USER_EMAIL>"
+・git config --global user.email "<USER_EMAIL>"\
   コミットした際に表示されるメールアドレスを設定する。
   "<USER_EMAIL>"は設定したいメールアドレスに置き換える。
 
-・git config --list
+・git config --list\
   有効化されている設定項目を参照する。
   上のコマンドで設定したユーザ名とメールアドレスはこのコマンドで確認することができる。
 
 ### リポジトリの作成
-・git init
+・git init\
   gitリポジトリを作成する。
 
-・git init --bare
+・git init --bare\
   ベアリポジトリ（リモートリポジトリ）を作成する。
 
 ### コミット
-・git add
+・git add\
   指定したファイルをインデックスに登録する。
 
-・git add .
+・git add .\
   ワークツリー内のすべてのファイルをインデックスに登録する。
 
-・git commit
-  インデックスに登録されたファイルを指定してコミットする。
-  **オプション**
-  ・-m
-  コミットメッセージを付け加えることができる。
-  ・-a
-  最後のコミット以降に変更されたすべてのファイルをコミットすることができる。
-  ただし、インデックスに登録されていないファイルはコミットすることができない。
+・git commit\
+  インデックスに登録されたファイルを指定してコミットする。\
+    **オプション**\
+    -m: コミットメッセージを付け加えることができる。\
+    -a: 最後のコミット以降に変更されたすべてのファイルをコミットすることができる。ただし、インデックスに登録されていないファイルはコミットすることができない。
 
 ### 設定・確認
 
-・git --help
+・git --help\
   コマンドのヘルプを表示する。
 
-・git status
+・git status\
   ワークツリーの状態を表示する。
 
-・git log
+・git log\
   コミットのログを表示する。
 
-・git log --oneline
+・git log --oneline\
 　コミットのログを簡潔に表示する
 
-・git diff
+・git diff\
   ワークツリーとインデックスのファイルの差分を表示する。
 
 ### ファイル・コミットの修正
 
-・git commit --amend --no-edit
+・git commit --amend --no-edit\
   コミットメッセージを変更せずに更新内容を最新のコミットに反映する。
 
-・git checkout
+・git checkout\
   インデックスからファイルを取得し、ファイルの復元を行う。
 
-・git rm
+・git rm\
   ファイルを削除し、インデックスに削除履歴を登録する。
 
-・git reset
+・git reset\
   特定のファイルのステージングを解除する。
 
-・git revert
+・git revert\
   直前のコミットを取り消すコミット。
 
 ### リモートリポジトリ
-・git clone
+・git clone\
   リポジトリをコピーする。
 
-・git push
+・git push\
   変更した内容をアップロードする。
 
-・git pull
+・git pull\
   pushされた内容を更新しリモートリポジトリとローカルリポジトリを同期する。
 
-・git request-pull
+・git request-pull\
   プルリクエスト（変更依頼）を出す。
 
-・git remote
+・git remote\
   リモートリポジトリの設定を行う。
 
 ### ブランチ
-・git branch
+・git branch\
   ブランチを作成する。
 
-・git checkout
+・git checkout\
   ブランチの変更を行う。
 
 ・git merge
